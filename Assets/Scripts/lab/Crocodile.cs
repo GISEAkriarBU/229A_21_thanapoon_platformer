@@ -18,7 +18,7 @@ public class Crocodile : Enemy
     }
     private void Update()
     {
-        bulletTimer = Time.deltaTime;
+        bulletTimer -= Time.deltaTime;
         Behaviour();
         if (bulletTimer < 0) 
         {
@@ -30,7 +30,7 @@ public class Crocodile : Enemy
     {
         Vector2 direction = player.transform.position - transform.position;
         float distance = direction.magnitude;
-        if ( distance < attackRange ) { Debug.Log("shoot"); }
+        if ( distance < attackRange ) {  shoot(); }
     }
 
     private void shoot () 
