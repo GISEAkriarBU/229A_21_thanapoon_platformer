@@ -2266,7 +2266,7 @@ MonoBehaviour:
   player: {fileID: 1521085296}
   bullet: {fileID: 115806, guid: 40466c5ac40024bbca1e4b144cdf43c2, type: 3}
   bulletSpawn: {fileID: 2041987100}
-  bulletWaitTime: 1.5
+  bulletWaitTime: 3
   bulletTimer: 0
 --- !u!95 &1460762867 stripped
 Animator:
