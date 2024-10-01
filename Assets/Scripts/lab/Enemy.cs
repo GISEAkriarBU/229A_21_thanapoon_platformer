@@ -14,5 +14,5 @@ public abstract class Enemy : Character
     public abstract void Behaviour();
 
 
-    private void start() { Behaviour(); }
+    private void Start () { Behaviour(); }
 }

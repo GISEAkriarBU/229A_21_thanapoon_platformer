@@ -1606,8 +1606,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c02bfeaa9ab2ac48b3d6a2690e83c09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  rb: {fileID: 0}
+  health: 0
+  anim: {fileID: 1102010122}
+  rb: {fileID: 1102010123}
+  velocity: {x: 1, y: 0}
+  movePoints:
+  - {fileID: 838433227}
+  - {fileID: 2009668577}
+--- !u!95 &1102010122 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9576784, guid: 3eeab7ca4bdca4ba382826bdc99b4911, type: 3}
+  m_PrefabInstance: {fileID: 341433136}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1102010123 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 5099268, guid: 3eeab7ca4bdca4ba382826bdc99b4911, type: 3}
+  m_PrefabInstance: {fileID: 341433136}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1103379425
 GameObject:
   m_ObjectHideFlags: 0
@@ -2244,8 +2259,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2277829c1b68d7c4292e367bc03515bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  rb: {fileID: 0}
+  health: 0
+  anim: {fileID: 1460762867}
+  rb: {fileID: 1460762869}
+--- !u!95 &1460762867 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9555892, guid: c07db661138134f589f46b8510d57c9a, type: 3}
+  m_PrefabInstance: {fileID: 1798490023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1460762869 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 5023672, guid: c07db661138134f589f46b8510d57c9a, type: 3}
+  m_PrefabInstance: {fileID: 1798490023}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1493215482 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 407626, guid: efff92728486e44de9714de91b3abbd2, type: 3}
