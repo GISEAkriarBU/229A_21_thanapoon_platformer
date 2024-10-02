@@ -29,7 +29,7 @@ public class Ant : Enemy
         {
             flip();
         }
-        else if (rb.position.x <= movePoints[1].position.x && velocity.x < 0)
+        else if (rb.position.x >= movePoints[1].position.x && velocity.x > 0)
         {
             flip();
         }
@@ -37,6 +37,9 @@ public class Ant : Enemy
 
     private void flip()
     {
-        velocity *= -1; Vector2 charScale = transform.localScale; charScale.x *= -1; transform.localScale = charScale;
+        velocity *= -1;
+        Vector2 scale = transform.localScale;
+        scale.x *= -1; 
+        transform.localScale = scale;
     }
 }
