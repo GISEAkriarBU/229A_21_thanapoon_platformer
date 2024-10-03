@@ -12,6 +12,6 @@ public class Banana : Weapons
 
     [SerializeField]  private float speed ;
     public override void OnHitWith(Character enemy) { }
-    public override void Move() { Debug.Log($"{name} TARNSFORM WITH ({speed}) "); }
+    public override void Move() { Debug.Log($" object {name} TARNSFORM WITH speed ({speed})  "); }
  
 }
