@@ -5,6 +5,7 @@ using UnityEngine;
 public class Rock : Weapons
 
 {
+    
     private void Start()
     {
         

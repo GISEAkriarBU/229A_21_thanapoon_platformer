@@ -4,13 +4,13 @@ using UnityEngine;
 
 public abstract class Weapons : MonoBehaviour
 {
-    [SerializeField] private int damage;
-    public int Damage { get { return Damage; } set { Damage = value; } }
-    public string Owner;
-
+    [SerializeField]private int damage;
+    public int Damage { get { return damage; } set { damage = value; } }
     
+    protected string owner;
+
     public abstract void OnHitWith(Character character);
     public abstract void Move();
-    public  int GetHitDirection(int hitD) {  return 1; }
+    public int GetShootDirection() {  return 1; }
 
 }
