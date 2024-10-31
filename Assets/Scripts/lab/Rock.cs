@@ -16,6 +16,6 @@ public class Rock : Weapons
     [SerializeField] private Rigidbody2D rb2d;
     [SerializeField] private Vector2 force;
 
-    public override void OnHitWith(Character enemy) { }
+    public override void OnHitWith(Character player) { }
     public override void Move() { Debug.Log($" object {name} TARNSFORM WITH Force ({force})"); }
 }
