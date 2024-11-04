@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class HelathPlayerController : MonoBehaviour
 {
@@ -30,7 +30,7 @@ public class HelathPlayerController : MonoBehaviour
 
     private void UpdateHealthBar()
     {
-       // _healthBarFill.fillAmount = _currentHealth / _maxHealth; ไม่สามารถไปต่อได้ขาดการเข้าถึงสู่ (UnityEngine.UI)
+        _healthBarFill.fillAmount = _currentHealth / _maxHealth;
     }
 
     }
