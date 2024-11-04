@@ -17,6 +17,7 @@ public class Player : Character,IShootable
     [field: SerializeField] public float BulletTimer { get; set; }
     [field: SerializeField] public float BulletWaitTime { get; set; }
     
+
     public void Shoot()
     {
        if (Input.GetButtonDown("Fire1")&& BulletWaitTime >= BulletTimer) 

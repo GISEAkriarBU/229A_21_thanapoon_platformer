@@ -18,12 +18,14 @@ public class Character : MonoBehaviour
 
     public bool Isdead() 
     { 
+
         return Health <= 0;
     }
 
-    public void TakeDamage(int damage) 
-    { 
+    public void TakeDamage(int damage)
+    {
         Health -= damage;
+
     }
-   
+
 }

@@ -176,4 +176,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 40
   rb2d: {fileID: 487102503326612028}
-  force: {x: 0, y: 0}
+  force: {x: 0, y: -1}
