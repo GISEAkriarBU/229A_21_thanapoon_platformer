@@ -2435,7 +2435,7 @@ MonoBehaviour:
   health: 100
   anim: {fileID: 1521085300}
   rb: {fileID: 1521085301}
-  bullet: {fileID: 182108, guid: a5638a192258f4059b0e074542d33fbc, type: 3}
+  bullet: {fileID: 7264791766415396109, guid: 8547df5bbebb971419a989d9aff9f046, type: 3}
   bulletSpawn: {fileID: 617186836}
   <BulletTimer>k__BackingField: 2
   <BulletWaitTime>k__BackingField: 0
@@ -2467,6 +2467,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthBarFill: {fileID: 1159808314}
+  _damageAmount: 30
+  gameController: {fileID: 1521085296}
 --- !u!1 &1536725162
 GameObject:
   m_ObjectHideFlags: 0
@@ -3518,6 +3520,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3105006854323261834, guid: aa19a5ff613e6cd478b70821b6060d89, type: 3}
       propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323739966716319626, guid: aa19a5ff613e6cd478b70821b6060d89, type: 3}
+      propertyPath: m_FillAmount
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
