@@ -12,14 +12,16 @@ public class Ant : Enemy
         rb = GetComponent<Rigidbody2D>();
         Init(10);
         Debug.Log($"{Health}");
-       
+        DamageHit = 5;
+
 
     }
     private void FixedUpdate()
     {
-         Behaviour();
+        Behaviour();
     }
 
+    public override void OnHitWith(Character character) { if (character is Player) { character.TakeDamage(this.DamageHit); } }
 
     public override void Behaviour()
     {

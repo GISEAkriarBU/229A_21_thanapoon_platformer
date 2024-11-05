@@ -25,31 +25,34 @@ public class Crocodile : Enemy , IShootable
     {
         Init(100);
         Debug.Log($"{Health}");
-      
-    }
-    private void Update()
-    {
-        BulletTimer -= Time.deltaTime;
-        Behaviour();
-        if (BulletTimer < 0) 
-        {
-            BulletTimer = BulletWaitTime;
-        }
-    }
+        DamageHit = 10;
 
+    }
+    private void FixedUpdate()
+    {
+        BulletWaitTime += Time.deltaTime;
+        Behaviour();
+    }
+    public override void OnHitWith(Character character) { if (character is Player) { character.TakeDamage(this.DamageHit); } }
     public override void Behaviour()
     {
         Vector2 direction = player.transform.position - transform.position;
         float distance = direction.magnitude;
-        if ( distance < attackRange ) { Shoot(); }
+        if ( distance <= attackRange ) { Shoot(); }
+       
     }
 
-    public void Shoot () 
-    { 
-        if (BulletTimer < 0) 
-        { 
-           Instantiate(bullet,bulletSpawn.position,Quaternion.identity);
+    public void Shoot ()
+    {
+        if (BulletWaitTime >= BulletTimer)
+        {
+            anim.SetTrigger("Shoot");
+            GameObject obj = Instantiate(bullet, BulletSpawn.position, Quaternion.identity);
+            Rock rockScipt = obj.GetComponent<Rock>();
+            rockScipt.Init(20, this);
+
+            BulletWaitTime = 0;
         }
-     
+
     }
 }

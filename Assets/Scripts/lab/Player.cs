@@ -16,24 +16,38 @@ public class Player : Character,IShootable
 
     [field: SerializeField] public float BulletTimer { get; set; }
     [field: SerializeField] public float BulletWaitTime { get; set; }
-    
+
 
     public void Shoot()
     {
-       if (Input.GetButtonDown("Fire1")&& BulletWaitTime >= BulletTimer) 
-        { 
-         
-            Instantiate(bullet , bulletSpawn . position, Quaternion.identity);
+        if (Input.GetButtonDown("Fire1") && BulletWaitTime >= BulletTimer)
+        {
+
+            GameObject obj = Instantiate(bullet, bulletSpawn.position, Quaternion.identity);
+            Banana banana = obj.GetComponent<Banana>();
+            banana.Init( 20 , this);
         }
     }
-    
+
+    private void OnCollisionEnter2D(Collision2D collision) 
+    {
+        Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+        if (enemy != null)
+        {
+            OnHitWith(enemy);
+        }
+
+    }
+    public void OnHitWith(Enemy enemy) { TakeDamage(enemy.DamageHit); }
     public void Start()
     {
         Init(100);
         Debug.Log($"{Health}");
+        BulletTimer = 0.0f;
+        BulletWaitTime = 1.0f;
 
     }
-    
+
     private void Update()
     {
         Shoot();

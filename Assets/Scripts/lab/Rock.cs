@@ -1,21 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class Rock : Weapons
 
 {
-    
-    private void Start()
+    [SerializeField] private Rigidbody2D rb2d;
+    [SerializeField] private Vector2 force;
+
+    void Start()
     {
-        
+        force = new Vector2(GetShootDirection() * 100, 400);
         Move();
 
     }
     
-    [SerializeField] private Rigidbody2D rb2d;
-    [SerializeField] private Vector2 force;
-
-    public override void OnHitWith(Character player) { }
-    public override void Move() { Debug.Log($" object {name} TARNSFORM WITH Force ({force})"); }
+    public override void OnHitWith(Character character) { if (character is Player) { character.TakeDamage(this.Damage); }}
+    public override void Move() { rb2d.AddForce (force, ForceMode2D.Force); }
 }

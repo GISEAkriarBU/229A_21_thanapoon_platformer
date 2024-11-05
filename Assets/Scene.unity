@@ -1815,7 +1815,7 @@ Transform:
   m_GameObject: {fileID: 1103379425}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: 3.68, z: 1}
+  m_LocalPosition: {x: 6.01, y: 3.68, z: 1}
   m_LocalScale: {x: 1.329522, y: 1.329522, z: 1.329522}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2376,12 +2376,12 @@ MonoBehaviour:
   health: 30
   anim: {fileID: 1460762867}
   rb: {fileID: 1460762869}
-  attackRange: 10
+  attackRange: 6
   player: {fileID: 1521085296}
   bullet: {fileID: 3078713520304429708, guid: 205ac13be4d9ccb4791416a500649454, type: 3}
   bulletSpawn: {fileID: 2041987100}
   <BulletTimer>k__BackingField: 5
-  <BulletWaitTime>k__BackingField: 1
+  <BulletWaitTime>k__BackingField: 0
 --- !u!95 &1460762867 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9555892, guid: c07db661138134f589f46b8510d57c9a, type: 3}
