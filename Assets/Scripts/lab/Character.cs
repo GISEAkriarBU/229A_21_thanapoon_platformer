@@ -18,7 +18,11 @@ public class Character : MonoBehaviour
 
     public bool Isdead() 
     { 
-
+        if ( Health <= 0)
+        {
+            Destroy(this.gameObject);
+            return true;
+        }
         return Health <= 0;
     }
 

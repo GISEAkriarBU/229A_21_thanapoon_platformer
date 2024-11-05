@@ -9,8 +9,11 @@ public abstract class Weapons : MonoBehaviour
     
     protected string owner;
 
+    
     public abstract void OnHitWith(Character character);
     public abstract void Move();
+
+
     public int GetShootDirection() {  return 1; }
 
 }

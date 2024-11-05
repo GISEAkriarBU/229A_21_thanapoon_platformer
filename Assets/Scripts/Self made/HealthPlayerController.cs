@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;//intelisence เกิดปัญหาตวรจไม่พบ UnityEngine.UI
 
 
-public class HelathPlayerController : MonoBehaviour
+public class HealthPlayerController : MonoBehaviour
 {
     [SerializeField] private float _maxHealth ;
     private float _currentHealth;
