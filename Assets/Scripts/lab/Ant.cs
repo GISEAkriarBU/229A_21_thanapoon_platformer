@@ -10,7 +10,7 @@ public class Ant : Enemy
     public void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Init(10);
+        Init(50);
         Debug.Log($"{Health}");
         DamageHit = 5;
 

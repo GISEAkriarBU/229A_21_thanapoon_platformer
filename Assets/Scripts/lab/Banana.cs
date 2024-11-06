@@ -5,10 +5,13 @@ using UnityEngine.TextCore.Text;
 
 public class Banana : Weapons
 {
-
-    private void FixedUpdate()
+    private void Start()
     {
         speed = 4.0f * GetShootDirection();
+    }
+    private void FixedUpdate()
+    {
+        
         Move();
     }
 

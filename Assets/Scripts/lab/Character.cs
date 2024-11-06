@@ -2,19 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour 
+public class Character : MonoBehaviour
 {
-    [SerializeField]private int health;
+    [SerializeField] private int health;
+    [SerializeField] private Healthbar healthBar;
     public int Health { get { return health; } set { health = value; } }
 
     public Animator anim;
     public Rigidbody2D rb;
     
+
     public void Init(int newHealth)
     {
         Health = newHealth;
-    }
+        healthBar.SetMaxHealth(Health);
 
+    }
+    public float GetHealthPercentage()
+    {
+        return (float)Health / 100; 
+    }
 
     public bool Isdead() 
     { 
@@ -30,6 +37,7 @@ public class Character : MonoBehaviour
     {
         Health -= damage;
         Debug.Log($"{this.name} took {damage} remaining {this.Health} ");
+        healthBar.SetHealth(Health, 100);
         Isdead();
     }
 
