@@ -14,12 +14,14 @@ public class Character : MonoBehaviour
 
     public void Init(int newHealth)
     {
+        //init health
         Health = newHealth;
         healthBar.SetMaxHealth(Health);
 
     }
     public float GetHealthPercentage()
     {
+        //turn HP into percentage  to use in Fill
         return (float)Health / 100; 
     }
 
